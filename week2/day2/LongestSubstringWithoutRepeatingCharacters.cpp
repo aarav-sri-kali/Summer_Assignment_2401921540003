@@ -6,7 +6,7 @@ class Solution {
 public:
     int lengthOfLongestSubstring(std::string s) {
         // Array to store the last seen index of each ASCII character
-        std::vector<int> last_seen(128, -1);
+        vector<int> last_seen(128, -1);
         
         int max_len = 0;
         int left = 0;
@@ -23,7 +23,7 @@ public:
             last_seen[current_char] = right;
             
             // Update the maximum length found so far
-            max_len = std::max(max_len, right - left + 1);
+            max_len = max(max_len, right - left + 1);
         }
         
         return max_len;
