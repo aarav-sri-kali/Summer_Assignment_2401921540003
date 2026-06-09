@@ -1,10 +1,6 @@
-#include <vector>
-#include <string>
-#include <algorithm>
-
 class Solution {
 public:
-    int lengthOfLongestSubstring(std::string s) {
+    int lengthOfLongestSubstring(string s) {
         // Array to store the last seen index of each ASCII character
         vector<int> last_seen(128, -1);
         
