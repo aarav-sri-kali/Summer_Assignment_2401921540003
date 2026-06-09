@@ -1,9 +1,6 @@
-#include <vector>
-#include <string>
-
 class Solution {
 public:
-    bool checkInclusion(std::string s1, std::string s2) {
+    bool checkInclusion(string s1, string s2) {
         int len1 = s1.length();
         int len2 = s2.length();
         
@@ -11,8 +8,8 @@ public:
         if (len1 > len2) return false;
         
         // Arrays to store character frequencies
-        std::vector<int> s1_count(26, 0);
-        std::vector<int> window_count(26, 0);
+        vector<int> s1_count(26, 0);
+        vector<int> window_count(26, 0);
         
         // Populate frequencies for the first window
         for (int i = 0; i < len1; i++) {
